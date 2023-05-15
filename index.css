@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-image: url('./images/image1.jpeg');
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: sans-serif;
+    color: #FEFEFE;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    width: 320px;
+    margin: 250px auto 0 auto;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 30s infinite forwards linear;
+}
+
+.image {
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    border: 0.5px solid white;
+    border-radius: 2px;
+}
+
+span {
+    margin: auto;
+    font-size: 2rem;
+    color: #e2adb0;
+    font-size: 30px;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+.image:nth-child(1) {
+    background-image: url('./images/image1.jpeg');
+    transform: rotateY(0deg) translateZ(430px);
+}
+
+.image:nth-child(2) {
+    background-image: url('./images/image2.jpeg');
+    transform: rotateY(40deg) translateZ(430px);
+}
+
+.image:nth-child(3) {
+    background-image: url('./images/image3.jpeg');
+    transform: rotateY(80deg) translateZ(430px);
+}
+
+.image:nth-child(4) {
+    background-image: url('./images/image4.jpeg');
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.image:nth-child(5) {
+    background-image: url('./images/image5.jpeg');
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.image:nth-child(6) {
+    background-image: url('./images/image6.jpeg');
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.image:nth-child(7) {
+    background-image: url('./images/image7.jpeg');
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.image:nth-child(8) {
+    background-image: url('./images/image8.jpeg');
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.image:nth-child(9) {
+    background-image: url('./images/image9.jpeg');
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+.static-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  .static-image img {
+    max-width: 200%;
+    max-height: 200%;
+  }
+
+
+@media screen and (max-width: 800px) {
+    .container {
+    width: 100%;
+    margin-top: 100px;
+    }
+    
+    css
+    Copy code
+    .image {
+        width: 100%;
+        height: 80px;
+        top: 10px;
+    }
+    
+    span {
+        font-size: 20px;
+    }
+}
